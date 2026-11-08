@@ -1,0 +1,5 @@
+# A capo sempre LF: il file servito da jsDelivr deve essere identico byte per byte
+# a quello da cui si calcola l'hash di integrità (integrity="sha384-…").
+* text=auto eol=lf
+*.zip binary
+*.png binary

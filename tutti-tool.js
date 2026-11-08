@@ -1,11 +1,12 @@
-/* Tutti Tool, il pannello di accessibilità di Tutti prompti (prototipo 0.2, 29 settembre 2026).
+/* Tutti Tool 0.3.0, il pannello di accessibilità di Tutti prompti (30 settembre 2026).
+   https://github.com/IsabellaDuc/Tutti-Tool · licenza MIT.
    Un bottone fisso in un angolo apre un pannello laterale con cui chi visita
    adatta il sito a come legge e naviga: sei profili pronti, testo, colori,
    strumenti per orientarsi. Le scelte restano in questo browser (localStorage).
    Funziona su qualunque sito con una riga, meglio in testa alla pagina, prima
    degli altri script:
      <script src="tutti-tool.js" data-posizione="sinistra"
-             data-contatto="scrivi@tuttiprompti.it" data-dichiarazione="/accessibilita.html"></script>
+             data-contatto="info@esempio.it" data-dichiarazione="/accessibilita.html"></script>
    Attributi facoltativi: data-lingua (it | en; se manca segue <html lang>),
    data-posizione (destra | sinistra), data-dichiarazione (indirizzo della
    dichiarazione di accessibilità; se manca il bottone non c'è), data-contatto

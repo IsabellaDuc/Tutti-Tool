@@ -1,0 +1,30 @@
+# Chiavi, credenziali e dati personali: mai nel repository.
+# Keys, credentials and personal data: never in the repository.
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+secrets*
+*-token*
+*.sqlite
+*.db
+
+# Prove, collaudi e appoggi locali / local tests and scratch files
+lavoro-temporaneo/
+collaudo*/
+risultati/
+prove/
+*.log
+node_modules/
+
+# Sistema ed editor / OS and editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
