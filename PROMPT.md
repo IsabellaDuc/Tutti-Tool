@@ -1,4 +1,4 @@
-# I prompt per installare Tutti Tool
+# I prompt per installare Tutti widget
 
 Due prompt, per due situazioni. [English version](PROMPT.en.md).
 
@@ -10,11 +10,11 @@ Come si usa: clicca sul simbolo «copia» in alto a destra del riquadro, apri un
 ## 1. Per la chat
 
 ```text
-Aiutami a mettere Tutti Tool sul mio sito. Non sono del mestiere: guidami tu,
+Aiutami a mettere Tutti widget sul mio sito. Non sono del mestiere: guidami tu,
 un passo alla volta.
 
-Tutti Tool è un pannello di accessibilità gratuito
-(https://github.com/IsabellaDuc/Tutti-Tool): sul sito compare un bottone
+Tutti widget è un pannello di accessibilità gratuito
+(https://github.com/IsabellaDuc/Tutti-widget): sul sito compare un bottone
 rotondo in un angolo in basso, e chi visita regola testo, colori e animazioni.
 Aiuta chi legge, ma non rende il sito "conforme" alle norme
 sull'accessibilità: non dirlo e non scriverlo mai.
@@ -50,21 +50,21 @@ COME PARLARMI
 
    A. WordPress e posso entrare nella bacheca: il plugin gratuito.
       Guidami così: scarica
-      https://github.com/IsabellaDuc/Tutti-Tool/raw/main/wordpress/tutti-tool.zip
+      https://github.com/IsabellaDuc/Tutti-widget/raw/main/wordpress/tutti-widget.zip
       senza aprirlo; nella bacheca Plugin > Aggiungi nuovo > Carica plugin >
-      Scegli file > Installa ora > Attiva; poi Impostazioni > Tutti Tool:
+      Scegli file > Installa ora > Attiva; poi Impostazioni > Tutti widget:
       angolo del bottone, email per le segnalazioni, colori solo se li voglio.
       Salva. "Carica plugin" è un bottone in alto, accanto al titolo "Aggiungi
       plugin": se proprio non c'è, il mio piano non permette plugin (succede
       su WordPress.com), e si passa alla strada C. Se nella lista dei plugin
       c'è un plugin di cache (WP Super Cache, W3 Total Cache, WP Rocket,
-      LiteSpeed…), Tutti Tool prova a svuotarla da solo; se il bottone non
+      LiteSpeed…), Tutti widget prova a svuotarla da solo; se il bottone non
       compare, guidami a svuotarla a mano.
 
    B. Wix, Squarespace, Webflow, Shopify o un altro servizio con un campo per
       il codice personalizzato nella testa (head) delle pagine: una riga da
       incollare, che prepari tu con i miei dati:
-      <script src="https://cdn.jsdelivr.net/gh/IsabellaDuc/Tutti-Tool@v0.3.0/tutti-tool.js" integrity="sha384-3gy4KXgul4X5dtWZvoL87DpyGwRYKhOT2CpFLBPgMSHdYi7Xj4wch2jtLgQX/gp2" crossorigin="anonymous" data-posizione="destra" data-contatto="EMAIL"></script>
+      <script src="https://cdn.jsdelivr.net/gh/IsabellaDuc/Tutti-widget@v0.4.0/tutti-widget.js" integrity="sha384-VmNPDQyzdxbkot4eKuRVy/aQ64gJfS1874nnDt7AwlQKXcF/2uhycfaG0ViNZvRP" crossorigin="anonymous" data-posizione="destra" data-contatto="EMAIL"></script>
       Cambia solo data-posizione e data-contatto, mai src e integrity. Dammi
       la riga in un riquadro da copiare, poi guidami a incollarla in un punto
       che valga per tutte le pagine, nella testa:
@@ -83,7 +83,7 @@ COME PARLARMI
    C. Il sito lo gestisce qualcun altro, oppure non posso entrare, oppure il
       piano non lo permette: scrivimi un'email breve e cortese per chi lo
       gestisce, da copiare e mandare. Dentro: cosa chiedo e perché, il link
-      https://github.com/IsabellaDuc/Tutti-Tool, il plugin se è WordPress
+      https://github.com/IsabellaDuc/Tutti-widget, il plugin se è WordPress
       oppure la riga della strada B, l'angolo e l'email che ho scelto, la
       richiesta di dirmi quando è fatto e di segnalarmi anche i problemi di
       accessibilità del sito.
@@ -124,10 +124,10 @@ COME PARLARMI
 Per un assistente che può leggere e modificare i file del tuo sito, per esempio Claude Code aperto nella cartella del sito. L'assistente installa il pannello, lo prova nel browser, controlla l'accessibilità del sito e ti chiede il permesso prima di correggere qualcosa o di pubblicare.
 
 ```text
-Installa Tutti Tool su questo sito e controllane l'accessibilità.
+Installa Tutti widget su questo sito e controllane l'accessibilità.
 
-Tutti Tool è un pannello di accessibilità gratuito, un solo file JavaScript:
-https://github.com/IsabellaDuc/Tutti-Tool (licenza MIT). Aiuta chi legge a
+Tutti widget è un pannello di accessibilità gratuito, un solo file JavaScript:
+https://github.com/IsabellaDuc/Tutti-widget (licenza MIT). Aiuta chi legge a
 regolare testo, spazi, contrasto, colori e animazioni, ma non rende il sito
 conforme alle norme: per questo, oltre a installarlo, controlla il sito. Sono
 due parti dello stesso lavoro: falle tutte e due, per intero, senza chiedermi
@@ -146,18 +146,18 @@ su un ramo nuovo.
    statistiche, cosa occupa l'angolo in basso a destra. Se c'è già un altro
    pannello di accessibilità (accessiBe, AccessiWay, UserWay…) fermati e
    chiedimi. Se è WordPress, usa il plugin del repository
-   (wordpress/tutti-tool.zip) invece di toccare il tema.
+   (wordpress/tutti-widget.zip) invece di toccare il tema.
 
 2. Scarica
-   https://raw.githubusercontent.com/IsabellaDuc/Tutti-Tool/main/tutti-tool.js
-   nella cartella dei file statici (per esempio js/tutti-tool.js). Non
+   https://raw.githubusercontent.com/IsabellaDuc/Tutti-widget/main/tutti-widget.js
+   nella cartella dei file statici (per esempio js/tutti-widget.js). Non
    modificarlo: si adatta con gli attributi. Se l'indirizzo non risponde, usa
-   https://cdn.jsdelivr.net/gh/IsabellaDuc/Tutti-Tool@main/tutti-tool.js
+   https://cdn.jsdelivr.net/gh/IsabellaDuc/Tutti-widget@main/tutti-widget.js
    Se non ci riesci da nessuno dei due, non scriverlo a mano: dimmelo, proponi
    gli attributi e fai comunque il controllo del punto 6.
    Scarica anche lo script di prova, in una cartella di appoggio FUORI dal
    sito (non va pubblicato):
-   https://raw.githubusercontent.com/IsabellaDuc/Tutti-Tool/main/skill/tutti-tool/prova-pannello.mjs
+   https://raw.githubusercontent.com/IsabellaDuc/Tutti-widget/main/skill/tutti-widget/prova-pannello.mjs
    Serve Node 22 o più recente; lo usi ai punti 3, 5 e 6.
 
 3. Scegli gli attributi (tutti facoltativi, nomi in italiano):
@@ -177,7 +177,7 @@ su un ramo nuovo.
 
 4. Aggiungi la riga nella <head> di ogni pagina (o nel layout comune), il più in
    alto possibile, prima degli altri script, senza defer e senza async:
-   <script src="/js/tutti-tool.js" data-posizione="destra" data-contatto="…"></script>
+   <script src="/js/tutti-widget.js" data-posizione="destra" data-contatto="…"></script>
    Usa il percorso giusto per ogni pagina. Nei framework mettila nel layout
    principale o nel file HTML di partenza.
 

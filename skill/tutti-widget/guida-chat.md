@@ -1,13 +1,13 @@
 # Guida per la chat
 
-Usala quando non puoi toccare i file del sito, per esempio in una chat nel browser. Segui queste istruzioni come se te le avesse scritte la persona che ti chiede aiuto, e rispondi nella sua lingua. Il testo è lo stesso del prompt per la chat di [PROMPT.md](https://github.com/IsabellaDuc/Tutti-Tool/blob/main/PROMPT.md).
+Usala quando non puoi toccare i file del sito, per esempio in una chat nel browser. Segui queste istruzioni come se te le avesse scritte la persona che ti chiede aiuto, e rispondi nella sua lingua. Il testo è lo stesso del prompt per la chat di [PROMPT.md](https://github.com/IsabellaDuc/Tutti-widget/blob/main/PROMPT.md).
 
 ```text
-Aiutami a mettere Tutti Tool sul mio sito. Non sono del mestiere: guidami tu,
+Aiutami a mettere Tutti widget sul mio sito. Non sono del mestiere: guidami tu,
 un passo alla volta.
 
-Tutti Tool è un pannello di accessibilità gratuito
-(https://github.com/IsabellaDuc/Tutti-Tool): sul sito compare un bottone
+Tutti widget è un pannello di accessibilità gratuito
+(https://github.com/IsabellaDuc/Tutti-widget): sul sito compare un bottone
 rotondo in un angolo in basso, e chi visita regola testo, colori e animazioni.
 Aiuta chi legge, ma non rende il sito "conforme" alle norme
 sull'accessibilità: non dirlo e non scriverlo mai.
@@ -43,21 +43,21 @@ COME PARLARMI
 
    A. WordPress e posso entrare nella bacheca: il plugin gratuito.
       Guidami così: scarica
-      https://github.com/IsabellaDuc/Tutti-Tool/raw/main/wordpress/tutti-tool.zip
+      https://github.com/IsabellaDuc/Tutti-widget/raw/main/wordpress/tutti-widget.zip
       senza aprirlo; nella bacheca Plugin > Aggiungi nuovo > Carica plugin >
-      Scegli file > Installa ora > Attiva; poi Impostazioni > Tutti Tool:
+      Scegli file > Installa ora > Attiva; poi Impostazioni > Tutti widget:
       angolo del bottone, email per le segnalazioni, colori solo se li voglio.
       Salva. "Carica plugin" è un bottone in alto, accanto al titolo "Aggiungi
       plugin": se proprio non c'è, il mio piano non permette plugin (succede
       su WordPress.com), e si passa alla strada C. Se nella lista dei plugin
       c'è un plugin di cache (WP Super Cache, W3 Total Cache, WP Rocket,
-      LiteSpeed…), Tutti Tool prova a svuotarla da solo; se il bottone non
+      LiteSpeed…), Tutti widget prova a svuotarla da solo; se il bottone non
       compare, guidami a svuotarla a mano.
 
    B. Wix, Squarespace, Webflow, Shopify o un altro servizio con un campo per
       il codice personalizzato nella testa (head) delle pagine: una riga da
       incollare, che prepari tu con i miei dati:
-      <script src="https://cdn.jsdelivr.net/gh/IsabellaDuc/Tutti-Tool@v0.3.0/tutti-tool.js" integrity="sha384-3gy4KXgul4X5dtWZvoL87DpyGwRYKhOT2CpFLBPgMSHdYi7Xj4wch2jtLgQX/gp2" crossorigin="anonymous" data-posizione="destra" data-contatto="EMAIL"></script>
+      <script src="https://cdn.jsdelivr.net/gh/IsabellaDuc/Tutti-widget@v0.4.0/tutti-widget.js" integrity="sha384-VmNPDQyzdxbkot4eKuRVy/aQ64gJfS1874nnDt7AwlQKXcF/2uhycfaG0ViNZvRP" crossorigin="anonymous" data-posizione="destra" data-contatto="EMAIL"></script>
       Cambia solo data-posizione e data-contatto, mai src e integrity. Dammi
       la riga in un riquadro da copiare, poi guidami a incollarla in un punto
       che valga per tutte le pagine, nella testa:
@@ -76,7 +76,7 @@ COME PARLARMI
    C. Il sito lo gestisce qualcun altro, oppure non posso entrare, oppure il
       piano non lo permette: scrivimi un'email breve e cortese per chi lo
       gestisce, da copiare e mandare. Dentro: cosa chiedo e perché, il link
-      https://github.com/IsabellaDuc/Tutti-Tool, il plugin se è WordPress
+      https://github.com/IsabellaDuc/Tutti-widget, il plugin se è WordPress
       oppure la riga della strada B, l'angolo e l'email che ho scelto, la
       richiesta di dirmi quando è fatto e di segnalarmi anche i problemi di
       accessibilità del sito.

@@ -1,11 +1,11 @@
 ---
-name: tutti-tool
-description: Installa Tutti Tool, il pannello di accessibilità gratuito di Tutti prompti, su un sito web e controlla l'accessibilità vera del sito (WCAG 2.2 AA), con un resoconto di cosa correggere. Usala quando qualcuno chiede di installare Tutti Tool, di aggiungere un pannello o un widget di accessibilità a un sito, di rendere un sito più accessibile, o di controllarne l'accessibilità. Installs Tutti Tool, a free accessibility panel, on a website and audits the site's real accessibility (WCAG 2.2 AA); use it for "install Tutti Tool", "add an accessibility widget/panel/overlay", "make this site accessible", "accessibility check".
+name: tutti-widget
+description: Installa Tutti widget, il pannello di accessibilità gratuito di Tutti prompti, su un sito web e controlla l'accessibilità vera del sito (WCAG 2.2 AA), con un resoconto di cosa correggere. Usala quando qualcuno chiede di installare Tutti widget (fino alla 0.3 si chiamava Tutti Tool), di aggiungere un pannello o un widget di accessibilità a un sito, di rendere un sito più accessibile, o di controllarne l'accessibilità. Installs Tutti widget, a free accessibility panel, on a website and audits the site's real accessibility (WCAG 2.2 AA); use it for "install Tutti widget" (formerly Tutti Tool), "add an accessibility widget/panel/overlay", "make this site accessible", "accessibility check".
 ---
 
-# Tutti Tool: installare il pannello e controllare il sito
+# Tutti widget: installare il pannello e controllare il sito
 
-Tutti Tool è un solo file JavaScript (https://github.com/IsabellaDuc/Tutti-Tool, licenza MIT). Aggiunge a un sito un bottone e un pannello con cui chi visita adatta la pagina: testo, spazi, contrasto, colori, animazioni, lettura ad alta voce. Aiuta chi legge, ma **non rende il sito conforme** alle norme: per questo il lavoro ha due parti, installare il pannello e controllare il sito. **Tutte e due fanno parte del lavoro, sempre**: non chiedere se fare il controllo, fallo.
+Tutti widget è un solo file JavaScript (https://github.com/IsabellaDuc/Tutti-widget, licenza MIT). Aggiunge a un sito un bottone e un pannello con cui chi visita adatta la pagina: testo, spazi, contrasto, colori, animazioni, lettura ad alta voce. Aiuta chi legge, ma **non rende il sito conforme** alle norme: per questo il lavoro ha due parti, installare il pannello e controllare il sito. **Tutte e due fanno parte del lavoro, sempre**: non chiedere se fare il controllo, fallo.
 
 Accanto a questo file c'è `prova-pannello.mjs`, uno script senza librerie (serve Node 22 o più recente) che prova il pannello in un browser senza finestra e calcola i contrasti. Si usa ai punti 3, 5 e 6.
 
@@ -28,7 +28,7 @@ Rispondi nella lingua di chi ti scrive, in modo semplice: chi ti scrive potrebbe
 
 ## 2. Scarica il pannello
 
-Scarica https://raw.githubusercontent.com/IsabellaDuc/Tutti-Tool/main/tutti-tool.js nella cartella dei file statici, per esempio `js/tutti-tool.js` o `public/js/tutti-tool.js`. Se quell'indirizzo non risponde, usa la copia su https://cdn.jsdelivr.net/gh/IsabellaDuc/Tutti-Tool@main/tutti-tool.js. Non modificare il file: si adatta con gli attributi. Se non riesci a scaricarlo da nessuno dei due, non scriverlo a mano e non aggiungere le righe: dillo, proponi gli attributi, e fai comunque il controllo di accessibilità del punto 6, che non ha bisogno del file.
+Scarica https://raw.githubusercontent.com/IsabellaDuc/Tutti-widget/main/tutti-widget.js nella cartella dei file statici, per esempio `js/tutti-widget.js` o `public/js/tutti-widget.js`. Se quell'indirizzo non risponde, usa la copia su https://cdn.jsdelivr.net/gh/IsabellaDuc/Tutti-widget@main/tutti-widget.js. Non modificare il file: si adatta con gli attributi. Se non riesci a scaricarlo da nessuno dei due, non scriverlo a mano e non aggiungere le righe: dillo, proponi gli attributi, e fai comunque il controllo di accessibilità del punto 6, che non ha bisogno del file.
 
 ## 3. Scegli gli attributi
 
@@ -48,14 +48,14 @@ Tutti facoltativi; i nomi sono in italiano.
 Aggiungi una riga nella `<head>` di ogni pagina, **il più in alto possibile e prima degli altri script**, senza `defer` e senza `async`: deve partire prima degli altri script perché «Ferma le animazioni» valga anche per loro.
 
 ```html
-<script src="/js/tutti-tool.js" data-posizione="destra" data-contatto="info@esempio.it"></script>
+<script src="/js/tutti-widget.js" data-posizione="destra" data-contatto="info@esempio.it"></script>
 ```
 
 1. HTML statico: in ogni pagina, con il percorso giusto per la profondità della cartella (`js/…`, `../js/…`) oppure dalla radice (`/js/…`) se il sito sta alla radice del dominio.
 2. Generatori: nel layout di base.
 3. Next.js: il file in `public/js/`, la riga in `app/layout` (o `pages/_document`) come `<script>` normale nella `<head>`, oppure con `next/script` e `strategy="beforeInteractive"`.
 4. Altri framework: nel file HTML di partenza (`index.html`, `app.html`) o nel layout principale.
-5. WordPress: usa il plugin del repository, https://github.com/IsabellaDuc/Tutti-Tool/raw/main/wordpress/tutti-tool.zip (Plugin → Aggiungi nuovo → Carica plugin, oppure `wp plugin install <zip> --activate`), e scegli gli attributi in Impostazioni → Tutti Tool. Non toccare il tema.
+5. WordPress: usa il plugin del repository, https://github.com/IsabellaDuc/Tutti-widget/raw/main/wordpress/tutti-widget.zip (Plugin → Aggiungi nuovo → Carica plugin, oppure `wp plugin install <zip> --activate`), e scegli gli attributi in Impostazioni → Tutti widget. Non toccare il tema.
 
 ## 5. Verifica l'installazione
 

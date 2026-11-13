@@ -1,5 +1,11 @@
 # Cosa cambia · Changelog
 
+## 0.4.0 · 13 novembre 2026
+
+1. **Nome nuovo: Tutti widget.** Fino alla 0.3 il pannello si chiamava Tutti Tool. Cambiano il nome del repository (`IsabellaDuc/Tutti-widget`; GitHub rimanda dal vecchio indirizzo), il file (`tutti-widget.js`), il plugin (`wordpress/tutti-widget.zip`) e la skill (`skill/tutti-widget/`). *New name: Tutti widget (formerly Tutti Tool); repository, file, plugin and skill renamed.*
+2. **Chi lo ha già non perde niente.** Le righe con `@v0.3.0` continuano a funzionare. Le scelte di chi visita restano: la chiave del salvataggio nel browser è ancora `tutti-tool`. Il plugin nuovo copia le impostazioni di Tutti Tool e, se trova ancora attivo il plugin di prima, non mette un secondo bottone e chiede di toglierlo. *Nothing breaks: `@v0.3.0` lines keep working, visitors keep their choices (storage key still `tutti-tool`), the plugin copies Tutti Tool's settings and avoids a double button.*
+3. Il pannello cambia solo nel nome in fondo («Tutti widget · Tutti prompti») e nell'intestazione. *Panel: only the name at the bottom and the header change.*
+
 ## 0.3.0 · 30 settembre 2026
 
 1. **Plugin per WordPress** (`wordpress/tutti-tool.zip`): si carica dalla bacheca, si attiva, si regola in Impostazioni → Tutti Tool. Il pannello è servito dal sito stesso; i colori con un contrasto troppo basso vengono rifiutati. *WordPress plugin: upload, activate, set it up in Settings → Tutti Tool.*

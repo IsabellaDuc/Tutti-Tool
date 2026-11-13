@@ -1,10 +1,10 @@
-# Tutti Tool
+# Tutti widget
 
 A free accessibility panel for websites, made by [Tutti prompti](https://tuttiprompti.it). A round button appears in a bottom corner of the site: visitors open it and adapt the page to how they read and browse, with larger text, more line spacing, more contrast, a readable font, animations stopped, the page read aloud.
 
-[Leggi in italiano](README.md) · See it at work on [tuttiprompti.it](https://tuttiprompti.it), the button at the bottom left.
+[Leggi in italiano](README.md) · See it at work on [tuttiprompti.it](https://tuttiprompti.it), the button at the bottom left. Up to version 0.3 it was called Tutti Tool.
 
-> Tutti Tool helps people read, but it **does not make a website compliant** with accessibility rules (WCAG, European Accessibility Act) and must not be presented that way. An accessible site comes from fixing the site; this is why the prompts below, besides installing the panel, help you see what needs fixing.
+> Tutti widget helps people read, but it **does not make a website compliant** with accessibility rules (WCAG, European Accessibility Act) and must not be presented that way. An accessible site comes from fixing the site; this is why the prompts below, besides installing the panel, help you see what needs fixing.
 
 ## Choose your path
 
@@ -18,10 +18,10 @@ You do not need to be a web professional. Find your case:
 
 ### 1. WordPress: the plugin
 
-1. Download [tutti-tool.zip](https://github.com/IsabellaDuc/Tutti-Tool/raw/main/wordpress/tutti-tool.zip). Do not unzip it: WordPress wants it as it is.
+1. Download [tutti-widget.zip](https://github.com/IsabellaDuc/Tutti-widget/raw/main/wordpress/tutti-widget.zip). Do not unzip it: WordPress wants it as it is.
 2. In the WordPress dashboard: **Plugins → Add New → Upload Plugin**.
-3. **Choose File**, select `tutti-tool.zip`, then **Install Now** and **Activate**.
-4. Go to **Settings → Tutti Tool**: choose the button's corner and the email for feedback. You can leave the colours as they are. Save.
+3. **Choose File**, select `tutti-widget.zip`, then **Install Now** and **Activate**.
+4. Go to **Settings → Tutti widget**: choose the button's corner and the email for feedback. You can leave the colours as they are. Save.
 5. Open the site: the button is in the bottom corner. If you do not see it, empty the cache (the plugin already tries with the most common caching plugins) and reload the page.
 
 The panel is served by your own site: no external service. If you do not see "Upload Plugin", your plan does not allow plugins (it happens on WordPress.com's cheaper plans): take path 3, or ask whoever built your site.
@@ -31,7 +31,7 @@ The panel is served by your own site: no external service. If you do not see "Up
 These platforms have a "custom code" field that goes into the head of every page. It usually needs a paid plan. Here is the line; change only the email:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/IsabellaDuc/Tutti-Tool@v0.3.0/tutti-tool.js" integrity="sha384-3gy4KXgul4X5dtWZvoL87DpyGwRYKhOT2CpFLBPgMSHdYi7Xj4wch2jtLgQX/gp2" crossorigin="anonymous" data-lingua="en" data-posizione="destra" data-contatto="hello@yoursite.com"></script>
+<script src="https://cdn.jsdelivr.net/gh/IsabellaDuc/Tutti-widget@v0.4.0/tutti-widget.js" integrity="sha384-VmNPDQyzdxbkot4eKuRVy/aQ64gJfS1874nnDt7AwlQKXcF/2uhycfaG0ViNZvRP" crossorigin="anonymous" data-lingua="en" data-posizione="destra" data-contatto="hello@yoursite.com"></script>
 ```
 
 `data-posizione` is `destra` (right) or `sinistra` (left); `data-lingua="en"` shows the panel in English. Where to paste it (menu names change a little over time: if you cannot find them, search "custom code" in the platform's help):
@@ -53,9 +53,9 @@ Copy, fill in the parts in square brackets and send:
 > Subject: An accessibility panel for the website
 >
 > Hi [name],
-> I would like to add Tutti Tool to [site address]: a free, open source accessibility panel. https://github.com/IsabellaDuc/Tutti-Tool
+> I would like to add Tutti widget to [site address]: a free, open source accessibility panel. https://github.com/IsabellaDuc/Tutti-widget
 >
-> - If the site runs on WordPress, the plugin is enough: https://github.com/IsabellaDuc/Tutti-Tool/raw/main/wordpress/tutti-tool.zip (Settings → Tutti Tool: corner [right/left], email [our public email]).
+> - If the site runs on WordPress, the plugin is enough: https://github.com/IsabellaDuc/Tutti-widget/raw/main/wordpress/tutti-widget.zip (Settings → Tutti widget: corner [right/left], email [our public email]).
 > - Otherwise it is one line in the head of every page; the instructions are in the repository's README.
 >
 > While you are at it, could you also tell me which accessibility problems the site has (contrast, image alt text, keyboard use)? The repository has a prompt that helps with this check.
@@ -81,7 +81,7 @@ The panel uses no cookies and sends no data: visitors' choices stay in their own
 
 A sentence for your privacy notice, if you use the line to paste (path 2):
 
-> The Tutti Tool accessibility panel is loaded from jsDelivr (cdn.jsdelivr.net), which receives visitors' IP address in order to deliver the file. The panel uses no cookies: display choices stay in the visitor's browser.
+> The Tutti widget accessibility panel is loaded from jsDelivr (cdn.jsdelivr.net), which receives visitors' IP address in order to deliver the file. The panel uses no cookies: display choices stay in the visitor's browser.
 
 With the WordPress plugin, or with the file hosted on your own site, there is no external service; the plugin adds its own sentence to WordPress's privacy policy guide (Settings → Privacy).
 
@@ -89,11 +89,11 @@ With the WordPress plugin, or with the file hosted on your own site, there is no
 
 ### Install it by hand
 
-1. Copy [tutti-tool.js](tutti-tool.js) into your site's files, for example into `js/`. It is a single file, no libraries.
+1. Copy [tutti-widget.js](tutti-widget.js) into your site's files, for example into `js/`. It is a single file, no libraries.
 2. On every page (or in the shared layout), inside `<head>` and **before other scripts**, without `defer` or `async`:
 
 ```html
-<script src="/js/tutti-tool.js" data-lingua="en" data-posizione="destra" data-contatto="hello@example.com"></script>
+<script src="/js/tutti-widget.js" data-lingua="en" data-posizione="destra" data-contatto="hello@example.com"></script>
 ```
 
 It must run before other scripts so that "Stop animations" also applies to JavaScript animations. You can try it right away by opening [esempio/index.html](esempio/index.html) in your browser.
@@ -107,7 +107,7 @@ It must run before other scripts so that "Stop animations" also applies to JavaS
 | `data-accento` | the light colour of the button and active choices | `#F4EEA9` |
 | `data-inchiostro` | the dark colour of the panel's text, borders and header | `#1C1D21` |
 | `data-carattere` | the panel's font family | `"Source Sans 3"` and system fonts |
-| `data-chiave` | the name under which choices are saved in the browser | `tutti-tool` |
+| `data-chiave` | the name under which choices are saved in the browser | `tutti-tool` (the panel's former name, kept so visitors do not lose their choices) |
 | `data-movimento` | `no` to leave `matchMedia` alone (see below) | `si` |
 
 The accent must stay light and the ink dark, with a contrast of at least 4.5:1 between them and between the ink and white.
@@ -115,8 +115,8 @@ The accent must stay light and the ink dark, with a contrast of at least 4.5:1 b
 ### With an assistant that works on the files
 
 1. **Prompt**: [PROMPT.en.md](PROMPT.en.md#2-for-an-assistant-that-works-on-the-sites-files), the second one. It installs the panel, tests it in a browser, checks the site's accessibility (WCAG 2.2 AA) and reports back, fixing nothing before your yes.
-2. **Skill for Claude**: copy the [skill/tutti-tool](skill/tutti-tool) folder into `~/.claude/skills/` (or `.claude/skills/` in the project), then ask "install Tutti Tool on this site". The skill also works in a chat without file access: there it acts as a guide, like the chat prompt.
-3. **Automatic test**: [skill/tutti-tool/prova-pannello.mjs](skill/tutti-tool/prova-pannello.mjs) (Node 22 or later, no libraries) opens the pages in a headless Chrome, Edge or Chromium and checks loading, the button, click, keyboard, choices carried across pages, contrast and console errors: `node prova-pannello.mjs <site folder>` or `node prova-pannello.mjs http://localhost:5173/`. With `--contrasto "#1C1D21" "#F4EEA9"` it computes the contrast between two colours (`rgba()` too). Its output is in Italian: "ok" passes, "NO" fails.
+2. **Skill for Claude**: copy the [skill/tutti-widget](skill/tutti-widget) folder into `~/.claude/skills/` (or `.claude/skills/` in the project), then ask "install Tutti widget on this site". The skill also works in a chat without file access: there it acts as a guide, like the chat prompt.
+3. **Automatic test**: [skill/tutti-widget/prova-pannello.mjs](skill/tutti-widget/prova-pannello.mjs) (Node 22 or later, no libraries) opens the pages in a headless Chrome, Edge or Chromium and checks loading, the button, click, keyboard, choices carried across pages, contrast and console errors: `node prova-pannello.mjs <site folder>` or `node prova-pannello.mjs http://localhost:5173/`. With `--contrasto "#1C1D21" "#F4EEA9"` it computes the contrast between two colours (`rgba()` too). Its output is in Italian: "ok" passes, "NO" fails.
 
 ### How it works
 
@@ -129,18 +129,18 @@ The accent must stay light and the ink dark, with a contrast of at least 4.5:1 b
 
 | Path | What |
 |---|---|
-| `tutti-tool.js` | the panel: the only file your site needs |
-| `wordpress/tutti-tool.zip` | the WordPress plugin, ready to upload |
-| `wordpress/tutti-tool/` | the plugin's source (with a copy of `tutti-tool.js`) |
+| `tutti-widget.js` | the panel: the only file your site needs |
+| `wordpress/tutti-widget.zip` | the WordPress plugin, ready to upload |
+| `wordpress/tutti-widget/` | the plugin's source (with a copy of `tutti-widget.js`) |
 | `PROMPT.md`, `PROMPT.en.md` | the prompts: for a chat and for an assistant that works on the files |
-| `skill/tutti-tool/` | the Claude skill, its chat guide and the test script |
+| `skill/tutti-widget/` | the Claude skill, its chat guide and the test script |
 | `esempio/index.html` | a page to try the panel |
 | `CHANGELOG.md` | what changes from one version to the next |
 
-Versions are pinned with tags (`v0.3.0`): the jsDelivr line and its `integrity` hash always point to a precise version, never to `main`.
+Versions are pinned with tags (`v0.4.0`): the jsDelivr line and its `integrity` hash always point to a precise version, never to `main`.
 
 ## Licence and contacts
 
 MIT: you may use, modify and redistribute it, including for work, keeping the author's name. See [LICENSE](LICENSE).
 
-Made by Isabella Ducros for [Tutti prompti](https://tuttiprompti.it), AI courses for beginners. Feedback and ideas: this repository's [issues](https://github.com/IsabellaDuc/Tutti-Tool/issues), or scrivi@tuttiprompti.it.
+Made by Isabella Ducros for [Tutti prompti](https://tuttiprompti.it), AI courses for beginners. Feedback and ideas: this repository's [issues](https://github.com/IsabellaDuc/Tutti-widget/issues), or scrivi@tuttiprompti.it.

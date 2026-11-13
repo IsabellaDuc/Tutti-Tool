@@ -1,10 +1,10 @@
-# Tutti Tool
+# Tutti widget
 
 Un pannello di accessibilità gratuito per siti web, fatto da [Tutti prompti](https://tuttiprompti.it). Sul sito compare un bottone rotondo in un angolo in basso: chi visita lo apre e adatta la pagina a come legge e naviga, con il testo più grande, più spazio tra le righe, più contrasto, un carattere leggibile, le animazioni ferme, la pagina letta ad alta voce.
 
-[Read in English](README.en.md) · Lo vedi al lavoro su [tuttiprompti.it](https://tuttiprompti.it), il bottone in basso a sinistra.
+[Read in English](README.en.md) · Lo vedi al lavoro su [tuttiprompti.it](https://tuttiprompti.it), il bottone in basso a sinistra. Fino alla versione 0.3 si chiamava Tutti Tool.
 
-> Tutti Tool aiuta chi legge, ma **non rende un sito conforme** alle norme sull'accessibilità (WCAG, European Accessibility Act) e non va presentato così. Un sito accessibile si ottiene sistemando il sito; per questo i prompt qui sotto, oltre a installare il pannello, ti aiutano a capire cosa correggere.
+> Tutti widget aiuta chi legge, ma **non rende un sito conforme** alle norme sull'accessibilità (WCAG, European Accessibility Act) e non va presentato così. Un sito accessibile si ottiene sistemando il sito; per questo i prompt qui sotto, oltre a installare il pannello, ti aiutano a capire cosa correggere.
 
 ## Scegli la tua strada
 
@@ -18,10 +18,10 @@ Non serve essere del mestiere. Trova il tuo caso:
 
 ### 1. WordPress: il plugin
 
-1. Scarica [tutti-tool.zip](https://github.com/IsabellaDuc/Tutti-Tool/raw/main/wordpress/tutti-tool.zip). Non aprirlo: WordPress lo vuole così com'è.
+1. Scarica [tutti-widget.zip](https://github.com/IsabellaDuc/Tutti-widget/raw/main/wordpress/tutti-widget.zip). Non aprirlo: WordPress lo vuole così com'è.
 2. Nella bacheca di WordPress: **Plugin → Aggiungi nuovo → Carica plugin**.
-3. **Scegli file**, seleziona `tutti-tool.zip`, poi **Installa ora** e **Attiva**.
-4. Vai in **Impostazioni → Tutti Tool**: scegli l'angolo del bottone e l'email per le segnalazioni. I colori puoi lasciarli come sono. Salva.
+3. **Scegli file**, seleziona `tutti-widget.zip`, poi **Installa ora** e **Attiva**.
+4. Vai in **Impostazioni → Tutti widget**: scegli l'angolo del bottone e l'email per le segnalazioni. I colori puoi lasciarli come sono. Salva.
 5. Apri il sito: il bottone è nell'angolo in basso. Se non lo vedi, svuota la cache (il plugin ci prova già da solo con i plugin di cache più diffusi; di solito c'è un bottone «Svuota cache» in alto nella bacheca) e ricarica la pagina.
 
 Il pannello viene servito dal tuo sito stesso: nessun servizio esterno. Se non vedi la voce «Carica plugin», il tuo piano non permette di installare plugin (succede su WordPress.com con i piani più economici): passa alla strada 3 o chiedi a chi ti ha fatto il sito.
@@ -31,7 +31,7 @@ Il pannello viene servito dal tuo sito stesso: nessun servizio esterno. Se non v
 Queste piattaforme hanno un campo per il «codice personalizzato» che finisce nella testa di tutte le pagine. Di solito serve un piano a pagamento. Ecco la riga; cambia solo l'email:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/IsabellaDuc/Tutti-Tool@v0.3.0/tutti-tool.js" integrity="sha384-3gy4KXgul4X5dtWZvoL87DpyGwRYKhOT2CpFLBPgMSHdYi7Xj4wch2jtLgQX/gp2" crossorigin="anonymous" data-posizione="destra" data-contatto="info@tuosito.it"></script>
+<script src="https://cdn.jsdelivr.net/gh/IsabellaDuc/Tutti-widget@v0.4.0/tutti-widget.js" integrity="sha384-VmNPDQyzdxbkot4eKuRVy/aQ64gJfS1874nnDt7AwlQKXcF/2uhycfaG0ViNZvRP" crossorigin="anonymous" data-posizione="destra" data-contatto="info@tuosito.it"></script>
 ```
 
 Dove incollarla (i nomi dei menu cambiano un po' nel tempo: se non li trovi, cerca «codice personalizzato» o «custom code» nell'aiuto della piattaforma):
@@ -53,9 +53,9 @@ Copia, completa le parti tra parentesi quadre e manda:
 > Oggetto: Un pannello di accessibilità sul sito
 >
 > Ciao [nome],
-> vorrei aggiungere al sito [indirizzo del sito] Tutti Tool, un pannello di accessibilità gratuito e open source: https://github.com/IsabellaDuc/Tutti-Tool
+> vorrei aggiungere al sito [indirizzo del sito] Tutti widget, un pannello di accessibilità gratuito e open source: https://github.com/IsabellaDuc/Tutti-widget
 >
-> - Se il sito è WordPress, basta il plugin: https://github.com/IsabellaDuc/Tutti-Tool/raw/main/wordpress/tutti-tool.zip (Impostazioni → Tutti Tool: angolo [destra/sinistra], email [la nostra email pubblica]).
+> - Se il sito è WordPress, basta il plugin: https://github.com/IsabellaDuc/Tutti-widget/raw/main/wordpress/tutti-widget.zip (Impostazioni → Tutti widget: angolo [destra/sinistra], email [la nostra email pubblica]).
 > - Altrimenti è una riga nella testa di tutte le pagine, con le istruzioni nel README del repository.
 >
 > Già che ci sei, puoi dirmi anche quali problemi di accessibilità ha il sito (contrasti, testi alternativi delle immagini, uso da tastiera)? Il repository ha un prompt che aiuta a fare questo controllo.
@@ -81,7 +81,7 @@ Il pannello non usa cookie e non manda dati: le scelte di chi visita restano nel
 
 Una frase per l'informativa privacy, se usi la riga da incollare (strada 2):
 
-> Il pannello di accessibilità Tutti Tool viene caricato da jsDelivr (cdn.jsdelivr.net), che riceve l'indirizzo IP di chi visita per consegnare il file. Il pannello non usa cookie: le scelte di visualizzazione restano nel browser di chi visita.
+> Il pannello di accessibilità Tutti widget viene caricato da jsDelivr (cdn.jsdelivr.net), che riceve l'indirizzo IP di chi visita per consegnare il file. Il pannello non usa cookie: le scelte di visualizzazione restano nel browser di chi visita.
 
 Con il plugin per WordPress o con il file sul tuo sito il servizio esterno non c'è; il plugin aggiunge la sua frase nella guida all'informativa di WordPress (Impostazioni → Privacy).
 
@@ -89,11 +89,11 @@ Con il plugin per WordPress o con il file sul tuo sito il servizio esterno non c
 
 ### Installarlo a mano
 
-1. Copia [tutti-tool.js](tutti-tool.js) tra i file del sito, per esempio in `js/`. È un solo file, senza librerie.
+1. Copia [tutti-widget.js](tutti-widget.js) tra i file del sito, per esempio in `js/`. È un solo file, senza librerie.
 2. In ogni pagina (o nel layout comune), dentro `<head>` e **prima degli altri script**, senza `defer` né `async`:
 
 ```html
-<script src="/js/tutti-tool.js" data-posizione="destra" data-contatto="info@esempio.it"></script>
+<script src="/js/tutti-widget.js" data-posizione="destra" data-contatto="info@esempio.it"></script>
 ```
 
 Deve partire prima degli altri script perché «Ferma le animazioni» valga anche per le animazioni fatte in JavaScript. Puoi provarlo subito aprendo [esempio/index.html](esempio/index.html) nel browser.
@@ -107,7 +107,7 @@ Deve partire prima degli altri script perché «Ferma le animazioni» valga anch
 | `data-accento` | il colore chiaro del bottone e delle scelte accese | `#F4EEA9` |
 | `data-inchiostro` | il colore scuro di testo, contorni e testata del pannello | `#1C1D21` |
 | `data-carattere` | la famiglia di caratteri del pannello | `"Source Sans 3"` e i caratteri di sistema |
-| `data-chiave` | il nome con cui le scelte si salvano nel browser | `tutti-tool` |
+| `data-chiave` | il nome con cui le scelte si salvano nel browser | `tutti-tool` (il nome di prima del pannello, tenuto perché chi visita non perda le scelte) |
 | `data-movimento` | `no` per non toccare `matchMedia` (vedi sotto) | `si` |
 
 L'accento deve restare chiaro e l'inchiostro scuro, con un contrasto di almeno 4,5:1 tra i due e tra l'inchiostro e il bianco.
@@ -115,8 +115,8 @@ L'accento deve restare chiaro e l'inchiostro scuro, con un contrasto di almeno 4
 ### Con un assistente che lavora sui file
 
 1. **Prompt**: [PROMPT.md](PROMPT.md#2-per-un-assistente-che-lavora-sui-file-del-sito), il secondo. Installa il pannello, lo prova nel browser, controlla l'accessibilità del sito (WCAG 2.2 AA) e fa un resoconto, senza correggere niente prima del tuo sì.
-2. **Skill per Claude**: copia la cartella [skill/tutti-tool](skill/tutti-tool) in `~/.claude/skills/` (o in `.claude/skills/` nel progetto), poi chiedi «installa Tutti Tool su questo sito». La skill funziona anche in una chat senza accesso ai file: in quel caso fa da guida, come il prompt per la chat.
-3. **Prova automatica**: [skill/tutti-tool/prova-pannello.mjs](skill/tutti-tool/prova-pannello.mjs) (Node 22 o più recente, nessuna libreria) apre le pagine in Chrome, Edge o Chromium senza finestra e controlla caricamento, bottone, clic, tastiera, scelte che passano da una pagina all'altra, contrasti, errori in console: `node prova-pannello.mjs <cartella del sito>` oppure `node prova-pannello.mjs http://localhost:5173/`. Con `--contrasto "#1C1D21" "#F4EEA9"` calcola il contrasto tra due colori (anche `rgba()`).
+2. **Skill per Claude**: copia la cartella [skill/tutti-widget](skill/tutti-widget) in `~/.claude/skills/` (o in `.claude/skills/` nel progetto), poi chiedi «installa Tutti widget su questo sito». La skill funziona anche in una chat senza accesso ai file: in quel caso fa da guida, come il prompt per la chat.
+3. **Prova automatica**: [skill/tutti-widget/prova-pannello.mjs](skill/tutti-widget/prova-pannello.mjs) (Node 22 o più recente, nessuna libreria) apre le pagine in Chrome, Edge o Chromium senza finestra e controlla caricamento, bottone, clic, tastiera, scelte che passano da una pagina all'altra, contrasti, errori in console: `node prova-pannello.mjs <cartella del sito>` oppure `node prova-pannello.mjs http://localhost:5173/`. Con `--contrasto "#1C1D21" "#F4EEA9"` calcola il contrasto tra due colori (anche `rgba()`).
 
 ### Come funziona
 
@@ -129,18 +129,18 @@ L'accento deve restare chiaro e l'inchiostro scuro, con un contrasto di almeno 4
 
 | Percorso | Cosa |
 |---|---|
-| `tutti-tool.js` | il pannello: l'unico file che serve al sito |
-| `wordpress/tutti-tool.zip` | il plugin per WordPress, pronto da caricare |
-| `wordpress/tutti-tool/` | il sorgente del plugin (con una copia di `tutti-tool.js`) |
+| `tutti-widget.js` | il pannello: l'unico file che serve al sito |
+| `wordpress/tutti-widget.zip` | il plugin per WordPress, pronto da caricare |
+| `wordpress/tutti-widget/` | il sorgente del plugin (con una copia di `tutti-widget.js`) |
 | `PROMPT.md`, `PROMPT.en.md` | i prompt: per la chat e per un assistente che lavora sui file |
-| `skill/tutti-tool/` | la skill per Claude, la sua guida per la chat e lo script di prova |
+| `skill/tutti-widget/` | la skill per Claude, la sua guida per la chat e lo script di prova |
 | `esempio/index.html` | una pagina per provare il pannello |
 | `CHANGELOG.md` | cosa cambia da una versione all'altra |
 
-Le versioni si fissano con i tag (`v0.3.0`): la riga con jsDelivr e l'hash `integrity` puntano sempre a una versione precisa, mai a `main`.
+Le versioni si fissano con i tag (`v0.4.0`): la riga con jsDelivr e l'hash `integrity` puntano sempre a una versione precisa, mai a `main`.
 
 ## Licenza e contatti
 
 MIT: puoi usarlo, modificarlo e ridistribuirlo, anche per lavoro, lasciando il nome dell'autrice. Vedi [LICENSE](LICENSE).
 
-Fatto da Isabella Ducros per [Tutti prompti](https://tuttiprompti.it), corsi sull'IA per chi comincia. Segnalazioni e proposte: le [issue](https://github.com/IsabellaDuc/Tutti-Tool/issues) di questo repository, o scrivi@tuttiprompti.it.
+Fatto da Isabella Ducros per [Tutti prompti](https://tuttiprompti.it), corsi sull'IA per chi comincia. Segnalazioni e proposte: le [issue](https://github.com/IsabellaDuc/Tutti-widget/issues) di questo repository, o scrivi@tuttiprompti.it.

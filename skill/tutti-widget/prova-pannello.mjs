@@ -1,11 +1,11 @@
-// Prova Tutti Tool in un browser senza finestra (Chrome, Edge o Chromium), senza
+// Prova Tutti widget in un browser senza finestra (Chrome, Edge o Chromium), senza
 // librerie: basta Node 22 o più recente. Apre ogni pagina e controlla che il
 // pannello si carichi una volta sola, che il bottone si veda e non sia coperto,
 // che il pannello si apra e si chiuda con il clic, con Alt + Maiusc + A e con
 // Esc, che una scelta fatta in una pagina valga nelle altre, i contrasti dei
 // colori scelti e gli errori in console. Stampa una riga per prova, «ok» o «NO»;
 // esce con 1 se una prova fallisce, con 3 se non trova un browser.
-// Tests Tutti Tool in a headless Chrome, Edge or Chromium (Node 22+, no deps).
+// Tests Tutti widget in a headless Chrome, Edge or Chromium (Node 22+, no deps).
 //
 // Uso / usage:
 //   node prova-pannello.mjs <cartella-del-sito> [pagina.html ...]
@@ -103,7 +103,7 @@ if (/^https?:\/\//.test(arg[0])) {
 // 3. Il browser senza finestra, pilotato con il protocollo DevTools.
 const pausa = ms => new Promise(r => setTimeout(r, ms));
 async function avvia(senzaSandbox) {
-  const profilo = mkdtempSync(join(tmpdir(), 'prova-tutti-tool-'));
+  const profilo = mkdtempSync(join(tmpdir(), 'prova-tutti-widget-'));
   const opzioni = ['--headless=new', '--remote-debugging-port=0', '--user-data-dir=' + profilo, '--no-first-run', '--no-default-browser-check',
     '--disable-extensions', '--disable-gpu', '--window-size=1280,800', ...(senzaSandbox ? ['--no-sandbox'] : []), 'about:blank'];
   const proc = spawn(browser, opzioni, { stdio: 'ignore' });
@@ -184,15 +184,15 @@ function prova(nome, esito, dettagli = '') { if (!esito) falliti++; console.log(
 // 4. Le prove, pagina per pagina.
 console.log(`Browser: ${browser}\nPagine: ${base}\n`);
 const buone = [];
-let chiave = 'tutti-tool', colori = null;
+let chiave = 'tutti-widget', colori = null;
 for (const pagina of pagine) {
   const caricamento = await apri(pagina);
   const nome = pagina || '/';
-  const s = await valuta(`(() => { const t = [...document.querySelectorAll('script[src*="tutti-tool"]')];
+  const s = await valuta(`(() => { const t = [...document.querySelectorAll('script[src*="tutti-widget"]')];
     return { righe: t.length, pannelli: document.querySelectorAll('#tp-accessibilita').length,
-      chiave: t[0]?.dataset.chiave || 'tutti-tool', inchiostro: t[0]?.dataset.inchiostro || '#1C1D21', accento: t[0]?.dataset.accento || '#F4EEA9',
+      chiave: t[0]?.dataset.chiave || 'tutti-widget', inchiostro: t[0]?.dataset.inchiostro || '#1C1D21', accento: t[0]?.dataset.accento || '#F4EEA9',
       primoScript: [...document.querySelectorAll('head script')].find(x => !x.type || /javascript|module/i.test(x.type)) === t[0], nellaTesta: !!t[0] && document.head.contains(t[0]), defer: !!t[0] && (t[0].defer || t[0].async) }; })()`);
-  if (!s.righe) { prova(`${nome}: la pagina carica tutti-tool.js`, false, 'nessuna riga'); continue; }
+  if (!s.righe) { prova(`${nome}: la pagina carica tutti-widget.js`, false, 'nessuna riga'); continue; }
   chiave = s.chiave; colori = colori || s;
   prova(`${nome}: il pannello si carica una volta sola`, s.righe === 1 && s.pannelli === 1, `${s.righe} righe, ${s.pannelli} pannelli` +
     (!s.pannelli && caricamento === 'loading' ? '; la pagina non ha finito di caricarsi in 20 secondi: un file esterno (caratteri, script) non risponde? Riprova con la rete o su una copia senza quel file' : ''));
@@ -212,8 +212,8 @@ for (const pagina of pagine) {
   await tasto('Escape', 'Escape', 27, 0);
   const esc = await valuta(`(() => { ${Q} return { chiuso: !aperto(), fuoco: r.activeElement?.classList.contains('apri') }; })()`);
   prova(`${nome}: Alt + Maiusc + A apre, Esc chiude e torna al bottone`, conTasti && esc.chiuso && esc.fuoco);
-  const delPannello = errori.filter(e => /tutti-tool/i.test(e));
-  const altri = [...new Set(errori.filter(e => !/tutti-tool/i.test(e)))];
+  const delPannello = errori.filter(e => /tutti-widget/i.test(e));
+  const altri = [...new Set(errori.filter(e => !/tutti-widget/i.test(e)))];
   prova(`${nome}: nessun errore del pannello in console`, !delPannello.length, delPannello.join(' | '));
   if (altri.length) console.log(`    avviso, errori del sito (non del pannello): ${altri.slice(0, 5).join(' | ')}`);
   buone.push(pagina);

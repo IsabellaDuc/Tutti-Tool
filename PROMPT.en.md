@@ -1,4 +1,4 @@
-# The prompts to install Tutti Tool
+# The prompts to install Tutti widget
 
 Two prompts, for two situations. [Versione italiana](PROMPT.md).
 
@@ -10,11 +10,11 @@ How to use it: click the "copy" icon at the top right of the box, open a new cha
 ## 1. For a chat
 
 ```text
-Help me put Tutti Tool on my website. I am not a web professional: guide me,
+Help me put Tutti widget on my website. I am not a web professional: guide me,
 one step at a time.
 
-Tutti Tool is a free accessibility panel
-(https://github.com/IsabellaDuc/Tutti-Tool): a round button appears in a
+Tutti widget is a free accessibility panel
+(https://github.com/IsabellaDuc/Tutti-widget): a round button appears in a
 bottom corner of the site, and visitors adjust text, colours and motion. It
 helps people read, but it does not make the site "compliant" with
 accessibility rules: never say or write that it does.
@@ -50,21 +50,21 @@ HOW TO TALK TO ME
 
    A. WordPress and I can log in to the dashboard: the free plugin.
       Guide me like this: download
-      https://github.com/IsabellaDuc/Tutti-Tool/raw/main/wordpress/tutti-tool.zip
+      https://github.com/IsabellaDuc/Tutti-widget/raw/main/wordpress/tutti-widget.zip
       without unzipping it; in the dashboard Plugins > Add New > Upload Plugin
-      > Choose File > Install Now > Activate; then Settings > Tutti Tool:
+      > Choose File > Install Now > Activate; then Settings > Tutti widget:
       button corner, feedback email, colours only if I want them. Save.
       "Upload Plugin" is a button at the top, next to the "Add Plugins" title:
       if it really is not there, my plan does not allow plugins (it happens on
       WordPress.com), and we take path C. If the plugin list includes a
       caching plugin (WP Super Cache, W3 Total Cache, WP Rocket, LiteSpeed…),
-      Tutti Tool tries to empty the cache by itself; if the button does not
+      Tutti widget tries to empty the cache by itself; if the button does not
       appear, guide me to empty it by hand.
 
    B. Wix, Squarespace, Webflow, Shopify or another service with a field for
       custom code in the head of the pages: one line to paste, which you
       prepare with my details:
-      <script src="https://cdn.jsdelivr.net/gh/IsabellaDuc/Tutti-Tool@v0.3.0/tutti-tool.js" integrity="sha384-3gy4KXgul4X5dtWZvoL87DpyGwRYKhOT2CpFLBPgMSHdYi7Xj4wch2jtLgQX/gp2" crossorigin="anonymous" data-lingua="en" data-posizione="destra" data-contatto="EMAIL"></script>
+      <script src="https://cdn.jsdelivr.net/gh/IsabellaDuc/Tutti-widget@v0.4.0/tutti-widget.js" integrity="sha384-VmNPDQyzdxbkot4eKuRVy/aQ64gJfS1874nnDt7AwlQKXcF/2uhycfaG0ViNZvRP" crossorigin="anonymous" data-lingua="en" data-posizione="destra" data-contatto="EMAIL"></script>
       Change only data-lingua (en or it), data-posizione (destra = right,
       sinistra = left) and data-contatto, never src and integrity. Give me the
       line in a box to copy, then guide me to paste it somewhere that applies
@@ -84,7 +84,7 @@ HOW TO TALK TO ME
    C. Someone else manages the site, or I cannot log in, or the plan does not
       allow it: write me a short, polite email for whoever manages it, to
       copy and send. In it: what I am asking and why, the link
-      https://github.com/IsabellaDuc/Tutti-Tool, the plugin if it is
+      https://github.com/IsabellaDuc/Tutti-widget, the plugin if it is
       WordPress or else the line from path B, the corner and email I chose,
       a request to tell me when it is done and to point out the site's
       accessibility problems too.
@@ -125,10 +125,10 @@ HOW TO TALK TO ME
 For an assistant that can read and edit your site's files, for example Claude Code opened in the site's folder. The assistant installs the panel, tests it in a browser, checks the site's accessibility and asks your permission before fixing anything or publishing.
 
 ```text
-Install Tutti Tool on this site and check its accessibility.
+Install Tutti widget on this site and check its accessibility.
 
-Tutti Tool is a free accessibility panel, a single JavaScript file:
-https://github.com/IsabellaDuc/Tutti-Tool (MIT licence). It helps visitors
+Tutti widget is a free accessibility panel, a single JavaScript file:
+https://github.com/IsabellaDuc/Tutti-widget (MIT licence). It helps visitors
 adjust text, spacing, contrast, colours and motion, but it does not make the
 site compliant with accessibility rules: so besides installing it, check the
 site. These are two parts of the same job: do both, in full, without asking me
@@ -146,19 +146,19 @@ branch.
    font, the language, the public email, the privacy page, analytics, what sits
    in the bottom right corner. If another accessibility panel is already there
    (accessiBe, AccessiWay, UserWay…) stop and ask me. If it is WordPress, use
-   the repository's plugin (wordpress/tutti-tool.zip) instead of touching the
+   the repository's plugin (wordpress/tutti-widget.zip) instead of touching the
    theme.
 
 2. Download
-   https://raw.githubusercontent.com/IsabellaDuc/Tutti-Tool/main/tutti-tool.js
-   into the static files folder (for example js/tutti-tool.js). Do not edit it:
+   https://raw.githubusercontent.com/IsabellaDuc/Tutti-widget/main/tutti-widget.js
+   into the static files folder (for example js/tutti-widget.js). Do not edit it:
    it is configured with attributes. If that address does not answer, use
-   https://cdn.jsdelivr.net/gh/IsabellaDuc/Tutti-Tool@main/tutti-tool.js
+   https://cdn.jsdelivr.net/gh/IsabellaDuc/Tutti-widget@main/tutti-widget.js
    If neither works, do not write it by hand: tell me, suggest the attributes
    and do the check in step 6 anyway.
    Also download the test script into a scratch folder OUTSIDE the site (it
    must not be published):
-   https://raw.githubusercontent.com/IsabellaDuc/Tutti-Tool/main/skill/tutti-tool/prova-pannello.mjs
+   https://raw.githubusercontent.com/IsabellaDuc/Tutti-widget/main/skill/tutti-widget/prova-pannello.mjs
    It needs Node 22 or later; you use it in steps 3, 5 and 6. Its output is in
    Italian: "ok" passes, "NO" fails.
 
@@ -178,7 +178,7 @@ branch.
 
 4. Add the line inside the <head> of every page (or the shared layout), as high
    as possible, before other scripts, without defer or async:
-   <script src="/js/tutti-tool.js" data-lingua="en" data-posizione="destra" data-contatto="…"></script>
+   <script src="/js/tutti-widget.js" data-lingua="en" data-posizione="destra" data-contatto="…"></script>
    Use the right path for each page. In frameworks put it in the main layout or
    the entry HTML file.
 

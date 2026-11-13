@@ -1,17 +1,19 @@
-/* Tutti Tool 0.3.0, il pannello di accessibilità di Tutti prompti (30 settembre 2026).
-   https://github.com/IsabellaDuc/Tutti-Tool · licenza MIT.
+/* Tutti widget 0.4.0, il pannello di accessibilità di Tutti prompti (13 novembre 2026;
+   fino alla 0.3 si chiamava Tutti Tool).
+   https://github.com/IsabellaDuc/Tutti-widget · licenza MIT.
    Un bottone fisso in un angolo apre un pannello laterale con cui chi visita
    adatta il sito a come legge e naviga: sei profili pronti, testo, colori,
    strumenti per orientarsi. Le scelte restano in questo browser (localStorage).
    Funziona su qualunque sito con una riga, meglio in testa alla pagina, prima
    degli altri script:
-     <script src="tutti-tool.js" data-posizione="sinistra"
+     <script src="tutti-widget.js" data-posizione="sinistra"
              data-contatto="info@esempio.it" data-dichiarazione="/accessibilita.html"></script>
    Attributi facoltativi: data-lingua (it | en; se manca segue <html lang>),
    data-posizione (destra | sinistra), data-dichiarazione (indirizzo della
    dichiarazione di accessibilità; se manca il bottone non c'è), data-contatto
    (email per le segnalazioni), data-chiave (nome del salvataggio, predefinito
-   «tutti-tool»), data-movimento="no" (non tocca matchMedia, vedi sotto).
+   «tutti-tool», il nome di prima del pannello, tenuto perché chi visita non
+   perda le scelte già fatte), data-movimento="no" (non tocca matchMedia, vedi sotto).
    Per adattare il pannello al sito che lo ospita: data-accento (il colore di
    bottone e scelte accese, predefinito la vaniglia #F4EEA9), data-inchiostro
    (il colore scuro di testo, contorni e testata, predefinito il carbone
@@ -581,7 +583,7 @@
     h += '<section aria-labelledby="tp-acc-s5"><h3 id="tp-acc-s5"><label for="tp-acc-vai">' + esc(t.sezVai) + '</label></h3><select class="vai" id="tp-acc-vai"></select></section>';
 
     h += '<div class="piede"><p>' + (CONF.contatto ? esc(t.nota) + '<a href="mailto:' + esc(CONF.contatto) + '">' + esc(CONF.contatto) + '</a>.' : esc(t.notaSenza)) + '</p>' +
-      '<p>' + esc(t.scorciatoia) + '</p><p>Tutti Tool · Tutti prompti</p></div></div>';
+      '<p>' + esc(t.scorciatoia) + '</p><p>Tutti widget · Tutti prompti</p></div></div>';
 
     pannello.innerHTML = h;
     pannello.setAttribute('aria-label', t.titolo);
